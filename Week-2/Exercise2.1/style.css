@@ -1,0 +1,177 @@
+*{
+    margin:0px;
+    padding:0px;
+    
+}
+body{
+    position:relative;
+    height:100vh;
+    font-family: lato;
+}
+
+header{
+    display: flex;
+    text-align:center;
+    padding:70px 0px;
+    width:100%;
+    background-image:url("./bg-image2.jpg");
+    background-repeat: no-repeat;
+    margin:10px 0px;
+    align-items: stretch;
+}
+
+header div{
+    margin:auto;
+    width:50%;
+    line-height:1.5;
+    color:#66FCF1;
+}
+
+header div h3{
+    font-size: 24px;
+}
+
+header div h1{
+    font-size:48px;
+}
+
+
+article{
+    margin:15px auto;
+    width:70%;
+}
+
+article h4{
+    padding:20px 0px;
+    font-size:24px;
+}
+
+article p{
+    font-size: 16px;
+}
+
+article a{
+    text-decoration: none;
+    color:#1F2833;
+    font-weight: 900;
+}
+
+article a:hover{
+    color:#0B0C10;
+    text-decoration: underline;
+}
+.row1{
+    display: flex;
+    align-items: stretch;
+}
+
+.row1>div{
+    padding:15px;
+    width:50%;
+}
+
+.row2{
+    display:flex;
+    align-items: center;
+
+}
+
+.row2>div{
+    padding:15px;
+    width:50%;
+}
+
+.article_img{
+    width:100%;
+    padding:30px;
+    box-sizing: border-box;
+}
+
+.subrow{
+    display: flex;
+    flex-direction: column;
+}
+
+
+form{
+    display: flex;
+    flex-direction:column;
+}
+fieldset{
+    margin:20px auto;
+    width: 30%;
+    padding:30px;
+    border:5px solid#66FCF1;
+    color:#1F2833;
+    font-weight: bold;
+    font-size:large;
+
+}
+form input{
+    box-sizing: border-box;
+    padding:10px 10px;
+    width:100%;
+    margin:10px 0px;
+}
+
+input[type=checkbox]{
+    text-align:left;
+    display: inline;
+    width:auto;
+}
+
+input[type=submit]{
+    margin-top: 20px;
+    font-size:20px;
+    font-weight:bold;
+    color: #1F2833;
+    background-color: white;
+    border:5px solid #1F2833;
+    border-radius:20px;
+}
+
+input[type=submit]:hover{
+    color:white;
+    background-color:#1F2833 ;
+}
+
+footer{
+    vertical-align: center;
+    text-align:center;
+    width:100%;
+    height:50px;
+    background-color:#1F2833;
+    color:#66FCF1;
+}
+
+@media only screen and (max-width:576px){
+    fieldset{
+        width:70%;
+    }
+    
+}
+
+@media only screen and (max-width:876px){
+    .row1>div{
+        padding:15px 0px;
+        width:100%;
+    }
+    .row2>div{
+        padding:15px 0px;
+        width:100%;
+    }
+    .row1{
+        flex-direction:column;
+    }
+
+    .row2{
+        flex-direction:column;
+
+    }
+
+    .article_img{
+        padding:15px;
+    }
+
+    
+}

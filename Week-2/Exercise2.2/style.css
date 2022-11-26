@@ -1,0 +1,62 @@
+*{
+    margin:0;
+    padding:0;
+}
+.main-box{
+    display:flex;
+    padding-top: 100px;
+    margin:auto;
+    height:250px;
+    width:250px;
+    flex-wrap: wrap;
+    position:relative;
+}
+
+.main-text{
+    position:absolute;
+    padding:105px;
+    font-size:20px;
+    z-index:-1;
+}
+
+.green{
+    background-color: green;
+    transform-origin: right bottom;
+}
+
+.main-box:hover .green{
+    transform: rotate(90deg);
+}
+
+.red{
+    background-color: red;
+    transform-origin: top left;
+}
+
+.main-box:hover .red{
+    transform: rotate(90deg);
+}
+
+.yellow{
+    background-color: yellow;
+    transform-origin: right top;
+}
+.main-box:hover .yellow{
+    transform: rotate(-90deg);
+}
+
+.blue{
+    background-color: blue;
+    transform-origin: left bottom;
+}
+
+.main-box:hover .blue{
+    transform: rotate(-90deg);
+}
+
+.ts{
+    height:125px;
+    width:125px;
+    transition:transform 1s ease-in-out;
+     
+}
