@@ -1,0 +1,15 @@
+.form{
+    border: 5px #6DECB9 solid;
+    width:60%;
+    margin:20px auto;
+    border-radius: 10px;
+    /* background-color: ; */
+}
+
+.form button{
+    margin:10px 0px;
+}
+
+.form input{
+    color:white;
+}
