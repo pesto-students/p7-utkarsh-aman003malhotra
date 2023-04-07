@@ -1,0 +1,42 @@
+SELECT *
+FROM warehouse_database.items
+WHERE weight = (SELECT MIN(weight) FROM warehouse_database.items);
+
+SELECT WID, WNAME, LOCATION FROM warehouse_database.warehouses as w
+LEFT JOIN warehouse_database.cities as c
+on w.cityID = c.cityID 
+WHERE c.city = 'Pune';
+
+SELECT i.ITEMNO, i.description, i.WEIGHT, i.COST, o.ONO, o.ODATE
+FROM warehouse_database.items as i
+JOIN warehouse_database.item_order_relation as r
+ON i.ITEMNO = r.ITEMNO
+JOIN warehouse_database.orders as o
+ON r.ONO = o.ONO
+JOIN warehouse_database.customer as c
+ON o.CNO = c.CNO
+WHERE c.CNAME = 'Mr. Patil';
+
+SELECT w.WID, w.WNAME, COUNT(s.SID) AS store_count
+FROM warehouse_database.WAREHOUSES AS w
+LEFT JOIN warehouse_database.STORES AS s
+ON w.WID = s.WID
+GROUP BY w.WID, w.WNAME
+ORDER BY store_count DESC
+LIMIT 1;
+
+
+SELECT i.ITEMNO, i.DESCRIPTION, COUNT(io.ONO) AS order_count
+FROM warehouse_database.ITEMS AS i
+LEFT JOIN warehouse_database.item_order_relation AS io
+ON i.ITEMNO = io.ITEMNO
+GROUP BY i.ITEMNO, i.DESCRIPTION
+ORDER BY order_count ASC
+LIMIT 1;
+
+SELECT c.CNO, c.CNAME, o.ONO, o.ODATE, i.ITEMNO, i.DESCRIPTION
+FROM warehouse_database.CUSTOMER AS c
+LEFT JOIN warehouse_database.ORDERS AS o ON c.CNO = o.CNO
+LEFT JOIN warehouse_database.item_order_relation AS io ON o.ONO = io.ONO
+LEFT JOIN warehouse_database.ITEMS AS i ON io.ITEMNO = i.ITEMNO
+ORDER BY c.CNO, o.ONO, i.ITEMNO;
