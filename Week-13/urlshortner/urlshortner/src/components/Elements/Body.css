@@ -1,0 +1,53 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.heading{
+    font-size: 65px;
+    margin-bottom: 80px;
+}
+.home h5{
+    font-weight: 400;
+}
+.svg img{
+    position: relative;
+    right:100px;
+}
+.box{
+    background:linear-gradient(to left,#3F3D56 ,#4b9bad);
+    padding: 30px 20px;
+    border-radius: 20px;
+    margin: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.box button{
+    border-radius: 20px;
+    background-color:#3F3D56 ;
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+}
+.box button:hover{
+    border-radius: 20px;
+    background-color:#2d7b8c ;
+    border: 2px solid #3F3D56;
+    color: white;
+    cursor: pointer;
+}
+.name{
+    color: white;
+    font-size: 20px;
+    font-family: 'algerian';
+}
+.in{
+    width: 60%;
+}
+.link_new{
+    background-color: black;
+    padding: 3px 10px;
+    border-radius: 10px;
+    color: white;
+}
