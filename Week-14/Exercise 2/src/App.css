@@ -1,0 +1,49 @@
+.App {
+  text-align: center;
+  margin:20px
+}
+
+.buttonSpace{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+}
+button{
+  width: 200px;
+  padding:10px 20px;
+  font-weight: 600;
+  font-size: 20px;
+  margin-top: 20px;
+  border:none;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.addStep{
+  color:white;
+  background-color:blueviolet
+} 
+
+.resetStep{
+  color:black;
+  background-color: light-grey;
+}
+
+
+.shadow-button {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
